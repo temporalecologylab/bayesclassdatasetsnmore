@@ -1,0 +1,13 @@
+
+*.Rapp.history
+*.Rhistory
+*.DS_Store
+*.docx
+*.ppt
+*.pptx
+*.aux
+*.log
+*.blg
+
+notposting/
+.Rproj.user
