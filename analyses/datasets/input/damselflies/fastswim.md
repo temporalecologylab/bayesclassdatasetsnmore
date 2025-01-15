@@ -1,4 +1,8 @@
-The variables are:
+# Swimming damselfiles
+
+This is a dataset of damselfly swimming performance that is the basis for a few papers from the late 1990's-2005 by Mark McPeek and colleagues. They were looking for species differences. Many of these also scale with "size" (i.e., wet mass here).
+
+### The variables are:
 
 Species - obviously.  You can probably figure out my codes by going to the Odonata Central website and looking at the list of Enallagma. The species code is E + first three letters of the specific epithet (e.g., Easp = Enallagma aspersum).  There's also Ischura verticalis (Iver) and Chromargion conditum (Ccon).
 
