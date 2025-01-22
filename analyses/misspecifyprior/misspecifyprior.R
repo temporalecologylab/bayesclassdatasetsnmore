@@ -5,7 +5,7 @@
 rm(list=ls()) 
 options(stringsAsFactors = FALSE)
 
-setwd("~/Documents/git/teaching/hotstats/hotstatsbayes/analyses/misspecifyprior/")
+setwd("~/Documents/git/teaching/hotstats/hotstatsmisc/bayesdatatsetsnmore/analyses/misspecifyprior")
 
 library(rstan)
 
