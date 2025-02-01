@@ -2,6 +2,8 @@
 ## By Lizzie ##
 ## Example problem to try manipulating posteriors ##
 
+## See also hierarchicalday2.R for some `solutions' code ##
+
 rm(list=ls()) 
 options(stringsAsFactors = FALSE)
 
