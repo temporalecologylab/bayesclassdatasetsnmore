@@ -202,13 +202,16 @@ b <- rnorm(Nspp, mean=mu_b, sd=sigma_b)
 
 # compare a few things on this single new dataset
 par(mfrow=c(1,2))
-hist(b, main="slopes (b) from the stan model with mean from the raw data in blue")
-abline(v = mean(dr$slopefits), col = "blue", lwd = 2) # less negative, slopes are generally pooled towards center which makes sense
-hist(dr$varfits, main="sigma y (b) from the raw data with sigma_y from the model in blue")
+# no-pooling slopes are more negative, which makes sense because slopes are generally pooled towards center
+hist(dr$slopefits, main="slopes (b) from the Stan model (in blue) and from the no-pooling model (in grey)", col = "grey90")
+hist(b, add = TRUE, col = rgb(51,51,255,max = 255, alpha = 50))
+hist(dr$varfits, main="sigma_y from the Stan model (in blue) and from the no-pooling model (in grey)", col = "grey90")
+abline(v=sigma_y, col = "white", lwd = 4) 
 abline(v=sigma_y, col = "blue", lwd = 2) 
 
-par(mfrow=c(1,2))
 
-hist(dr$intfits, breaks=20, main="No pool intercepts", xlab="intercept")
-hist(a, breaks=20, main="Partial pool intercepts")
+par(mfrow=c(1,1))
+hist(dr$intfits, breaks=20, main="No pool intercepts (grey) and Stan model intercepts (blue)", xlab="intercept", col = "grey90",
+     xlim = c(0,200))
+hist(a, breaks=20, col = rgb(51,51,255,max = 255, alpha = 50), add = TRUE)
 
