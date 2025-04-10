@@ -151,5 +151,6 @@ fitemp <- stan("stan/twolevelhierslopeint.stan", data=c("N","y","Nspp","species"
 
 
 ## Plotting
+# See also new code (as of March 2025): plotshrikagesync.R #
 # If time allows, follow models_stan_plotting_pp.R (OSPREE)
 # These figures are modelscompare_pp_force.pdf etc.
