@@ -201,17 +201,17 @@ a <- rnorm(Nspp, mean=mu_a, sd=sigma_a)
 b <- rnorm(Nspp, mean=mu_b, sd=sigma_b) 
 
 # compare a few things on this single new dataset
-par(mfrow=c(1,2))
+par(mfrow=c(1,2), mar = c(2,2,2,2))
 # no-pooling slopes are more negative, which makes sense because slopes are generally pooled towards center
-hist(dr$slopefits, main="slopes (b) from the Stan model (in blue) and from the no-pooling model (in grey)", col = "grey90")
+hist(dr$slopefits, main="slopes (b) from the Stan model (in blue)\nand from the no-pooling model (in grey)", col = "grey90", cex.main = 0.8)
 hist(b, add = TRUE, col = rgb(51,51,255,max = 255, alpha = 50))
-hist(dr$varfits, main="sigma_y from the Stan model (in blue) and from the no-pooling model (in grey)", col = "grey90")
+hist(dr$varfits, main="sigma_y from the Stan model (in blue)\nand from the no-pooling model (in grey)", col = "grey90", cex.main = 0.8)
 abline(v=sigma_y, col = "white", lwd = 4) 
 abline(v=sigma_y, col = "blue", lwd = 2) 
 
 
 par(mfrow=c(1,1))
-hist(dr$intfits, breaks=20, main="No pool intercepts (grey) and Stan model intercepts (blue)", xlab="intercept", col = "grey90",
-     xlim = c(0,200))
+hist(dr$intfits, breaks=20, main="No pool intercepts (grey)\nand Stan model intercepts (blue)", xlab="intercept", col = "grey90",
+     xlim = c(0,200), cex.main = 0.8)
 hist(a, breaks=20, col = rgb(51,51,255,max = 255, alpha = 50), add = TRUE)
 
