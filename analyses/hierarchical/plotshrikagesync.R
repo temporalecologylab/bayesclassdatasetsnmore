@@ -12,7 +12,7 @@ rm(list=ls())
 options(stringsAsFactors = FALSE)
 
 ## set working directory if you need to
-setwd("~/Documents/git/teaching/hotstats/hotstatsmisc/bayesdatatsetsnmore/analyses/hierarchical")
+setwd("~/Documents/git/teaching/hotstats/hotstatsmisc/bayesdatatsetsnmore2025/analyses/hierarchical")
 
 ## flags
 # You must set to true and RUN the models once for setting this to FALSE to work
